@@ -1,7 +1,31 @@
 .OT_mirrored.OT_root.OT_publisher{
-    margin-top: 15px;
+     margin-top: 15px;
+ }
+
+
+
+body{
+    background-color: #f0f0f0;
+
 }
 
-.OT_mirrored.OT_root.OT_publisher{
-    left: 74px;
+h1{
+    text-align: center;
+    margin-bottom: 50px;
+}
+h3{
+    margin-bottom: 30px;
+}
+
+.OT_mirrored.OT_root.OT_subscriber{
+    width: 20%!important;
+    margin-right: 5%;
+    float: left;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+
+#connected{
+    min-height: 270px;
 }

@@ -4,7 +4,11 @@
     <title>Opentok Quick Start</title>
     <script src="http://static.opentok.com/webrtc/v2.2/js/opentok.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <script src="js/lib/jquery.base64.min.js"></script>
+    <script src="js/lib/hmac-sha1.js"></script>
 
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -17,11 +21,24 @@
 
 <div class="container">
     <h1>Video chat demo!</h1>
-    <div id="container"></div>
+
+    <div class="well">
+        <h3 class="text-center">You:</h3>
+
+        <div id="publisher" class="center-block"></div>
+    </div>
+    <div class="well">
+        <h3 class="text-center">Connected to you:</h3>
+
+        <div id="connected">
+
+        </div>
+    </div>
 </div>
 
 
-
+<script src="js/init.js"></script>
+<script src="js/helper.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
