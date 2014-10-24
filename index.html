@@ -6,6 +6,7 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script type="text/javascript"
             src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
 
     <script src="js/lib/jquery.base64.min.js"></script>
     <script src="js/lib/hmac-sha1.js"></script>
@@ -45,26 +46,6 @@
 
         <section class="module" id="chatWrapper">
             <ol class="discussion">
-                <!--<li class="other">-->
-                    <!--<div class="messages">-->
-                        <!--<p>yeah, they do early flights cause they connect with big airports.  they wanna get u to your connection</p>-->
-                        <!--&lt;!&ndash;<time datetime="2009-11-13T20:00">Timothy • 51 min</time>&ndash;&gt;-->
-                    <!--</div>-->
-                <!--</li>-->
-                <!--<li class="self">-->
-                    <!--<div class="messages">-->
-                        <!--<p>That makes sense.</p>-->
-                        <!--<p>It's a pretty small airport.</p>-->
-                        <!--&lt;!&ndash;<time datetime="2009-11-13T20:14">37 mins</time>&ndash;&gt;-->
-                    <!--</div>-->
-                <!--</li>-->
-                <!--<li class="other">-->
-                    <!--<div class="messages">-->
-                        <!--<p>that mongodb thing looks good, huh?</p>-->
-                        <!--<p>-->
-                            <!--tiny master db, and huge document store</p>-->
-                    <!--</div>-->
-                <!--</li>-->
             </ol>
 
             <textarea id="chatInput"></textarea>
@@ -73,6 +54,26 @@
         </section>
     </div>
 </div>
+
+<script id="template_message_self" type="x-tmpl-mustache">
+<li class="self">
+    <div class="messages">
+        <span class='username'>{{ username }}</span>
+
+        <p>{{ text }}</p>
+    </div>
+</li>
+</script>
+
+<script id="template_message_other" type="x-tmpl-mustache">
+<li class="other">
+    <div class="messages">
+        <span class='username'>{{ username }}</span>
+
+        <p>{{text}}</p>
+    </div>
+</li>
+</script>
 
 
 <script src="js/init.js"></script>

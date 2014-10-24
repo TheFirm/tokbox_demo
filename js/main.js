@@ -31,13 +31,24 @@ function initChat (){
     TBAPP.session.on("signal", function(event) {
         if(event.data && event.data.fromUsername){
             var $discussion = $('#chatWrapper .discussion');
-            var appendElem = '';
+
+            var template = '';
+            var username = '';
+
             if(event.data.fromUsername == TBAPP.user.username){
-                appendElem = '<li class="self">\n    <div class="messages"><span class="user">' + 'me' + '</span>\n        <p>' + event.data.text + '</p>\n    </div>\n</li>';
+                template = $('#template_message_self').html();
+                username = 'me';
             } else {
-                appendElem = '<li class="other">\n    <div class="messages"><span class="user">' + event.data.fromUsername + '</span>\n        <p>' + event.data.text + '</p>\n    </div>\n</li>';
+                template = $('#template_message_other').html();
+                username = event.data.fromUsername;
             }
-            $discussion.append($(appendElem));
+
+            Mustache.parse(template);
+            var rendered = Mustache.render(template, {
+                text: event.data.text,
+                username: username
+            });
+            $discussion.append(rendered);
         }
         console.log("Signal sent from connection " , event);
         // Process the event.data property, if there is any data.
