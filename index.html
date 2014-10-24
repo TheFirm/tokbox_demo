@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
     <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/chat.css">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 
 
@@ -22,16 +23,54 @@
 <div class="container">
     <h1>Video chat demo!</h1>
 
-    <div class="well">
-        <div id="publisher" class="center-block"></div>
+    <div class="col-md-9">
+        <div class="well">
+            <div id="publisher" class="center-block"></div>
+        </div>
+
+        <h2>Visitors</h2>
+
+        <div class="well">
+            <div id="connected">
+
+            </div>
+        </div>
     </div>
 
-    <h2>Visitors</h2>
+    <div class="col-md-3">
+        <!--<div id="chatWrapper"></div>-->
+        <!--<textarea id="chatInput"></textarea>-->
+        <!--<button id="sendText">Send</button>-->
+        <!--<div class="clearfix"></div>-->
 
-    <div class="well">
-        <div id="connected">
+        <section class="module" id="chatWrapper">
+            <ol class="discussion">
+                <!--<li class="other">-->
+                    <!--<div class="messages">-->
+                        <!--<p>yeah, they do early flights cause they connect with big airports.  they wanna get u to your connection</p>-->
+                        <!--&lt;!&ndash;<time datetime="2009-11-13T20:00">Timothy • 51 min</time>&ndash;&gt;-->
+                    <!--</div>-->
+                <!--</li>-->
+                <!--<li class="self">-->
+                    <!--<div class="messages">-->
+                        <!--<p>That makes sense.</p>-->
+                        <!--<p>It's a pretty small airport.</p>-->
+                        <!--&lt;!&ndash;<time datetime="2009-11-13T20:14">37 mins</time>&ndash;&gt;-->
+                    <!--</div>-->
+                <!--</li>-->
+                <!--<li class="other">-->
+                    <!--<div class="messages">-->
+                        <!--<p>that mongodb thing looks good, huh?</p>-->
+                        <!--<p>-->
+                            <!--tiny master db, and huge document store</p>-->
+                    <!--</div>-->
+                <!--</li>-->
+            </ol>
 
-        </div>
+            <textarea id="chatInput"></textarea>
+            <button id="sendText">Send</button>
+
+        </section>
     </div>
 </div>
 
