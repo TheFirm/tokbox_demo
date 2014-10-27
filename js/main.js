@@ -78,7 +78,11 @@ function requestUserInfo(){
     TBAPP.user.username = prompt('Your name: ', new Date().getTime()+"");
 }
 
-
+/*
+$(".enter_name_submit").click(function(){
+    TBAPP.user.username = $("#name_input").val();
+});
+*/
 
 requestUserInfo();
 initChat();
