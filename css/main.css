@@ -27,8 +27,8 @@ h3{
 }
 
 
-.OT_mirrored.OT_root.OT_subscriber{
-    width: 16%!important;
+.OT_mirrored.OT_root.OT_subscriber, .block{
+    width: 23%!important;
     height: 180px!important;
     margin-right: 2%;
     float: left;
@@ -50,7 +50,7 @@ h3{
     margin-top: 0px;
 }
 .discussion{
-    min-height: 250px;
+    min-height: 350px;
 }
 
 .module {
@@ -68,3 +68,5 @@ h3{
     opacity: .7;
     top: 0;
 }
+
+
