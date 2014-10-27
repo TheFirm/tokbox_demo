@@ -105,7 +105,7 @@ $('#sendText').click(function (evt) {
 
 $('#chatInput').keypress(function (evt) {
     var $target = $(evt.target);
-    if (evt.ctrlKey && (evt.keyCode == 13 || evt.keyCode == 10) && $target.val().length > 0) {
+    if ((evt.keyCode == 13 || evt.keyCode == 10) && $target.val().length > 0) {
         var msg = $target.val();
         TBAPP.sendMessage(msg);
         $target.val("");
