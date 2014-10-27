@@ -50,7 +50,8 @@ h3{
     margin-top: 0px;
 }
 .discussion{
-    min-height: 350px;
+    height: 350px;
+    overflow-y: auto;
 }
 
 .module {
