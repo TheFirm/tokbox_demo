@@ -74,9 +74,9 @@ function initChat (){
     }
 }
 $('#myModal').modal();
-/*function requestUserInfo(){
+function requestUserInfo(){
     TBAPP.user.username = prompt('Your name: ', new Date().getTime()+"");
-}*/
+}
 
 
 
