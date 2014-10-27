@@ -73,17 +73,44 @@ function initChat (){
         );
     }
 }
+
+
 $('#myModal').modal();
-function requestUserInfo(){
-    TBAPP.user.username = prompt('Your name: ', new Date().getTime()+"");
-}
 
 
+$('#send_btn').click(function (evt) {
+    var $name_input = $('#name_input');
+    if($name_input.val().length > 0){
+        TBAPP.user.username = $name_input.val();
+    }
+});
 
-requestUserInfo();
-initChat();
+$('#name_input').keypress(function (evt) {
+    var $target = $(evt.target);
+
+    if ((evt.keyCode == 13 || evt.keyCode == 10) && $target.val().length > 0) {
+        TBAPP.user.username = $target.val();
+        $('#myModal').modal("hide");
+    }
+});
 
 $('#sendText').click(function (evt) {
-    var msg = $('#chatInput').val();
-    TBAPP.sendMessage(msg);
+    var $chatInput = $('#chatInput');
+    if($chatInput.val().length > 0){
+        var msg = $chatInput.val();
+        TBAPP.sendMessage(msg);
+        $chatInput.val("");
+    }
 });
+
+$('#chatInput').keypress(function (evt) {
+    var $target = $(evt.target);
+    if (evt.ctrlKey && (evt.keyCode == 13 || evt.keyCode == 10) && $target.val().length > 0) {
+        var msg = $target.val();
+        TBAPP.sendMessage(msg);
+        $target.val("");
+        return false;
+    }
+});
+
+initChat();
