@@ -27,13 +27,13 @@ h3{
 }
 
 
-.OT_mirrored.OT_root.OT_subscriber{
-    width: 16%!important;
+.OT_mirrored.OT_root.OT_subscriber, .block{
+    width: 23%!important;
     height: 180px!important;
     margin-right: 2%;
     float: left;
     margin-bottom: 25px;
-    margin-top: 10px;
+    margin-top: 6px;
 }
 
 
@@ -41,5 +41,39 @@ h3{
     min-height: 190px;
 }
 
+
+
+
+
+
+#chatWrapper{
+    margin-top: 0px;
+}
+.discussion{
+    height: 350px;
+    overflow-y: auto;
+}
+
+.module {
+    width: 100%;
+}
+#myModal .modal-footer{
+    padding-top: 5px;
+}
+
+.modal-open .overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: .7;
+    top: 0;
+}
+
+.control-label.send{
+    display: block;
+    margin-top: -50px;
+    font-size: 12px;
+}
 
 
