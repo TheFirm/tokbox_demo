@@ -5,9 +5,9 @@ var TBAPP = TBAPP || {};
 // // Think of a session as a room, and a key.token as the key to get in to the room
 // // Sessions and tokens are generated on your server and passed down to the client
  TBAPP.key = {
-     key: "45564512",
-         sessionId: "1_MX40NTU2NDUxMn5-MTQ2MDk4ODkyMDMxNH5IUE13RXphR0RuYXVqbS9tdFkrY0ZUbzh-UH4",
-             token: "T1==cGFydG5lcl9pZD00NTU2NDUxMiZzaWc9NTJhZTYwZjIzMGM0ZDk1OWNkZjQ4YzUxNzQxZWUxMzVlMWNiNzI2OTpyb2xlPXB1Ymxpc2hlciZzZXNzaW9uX2lkPTFfTVg0ME5UVTJORFV4TW41LU1UUTJNRGs0T0RreU1ETXhOSDVJVUUxM1JYcGhSMFJ1WVhWcWJTOXRkRmtyWTBaVWJ6aC1VSDQmY3JlYXRlX3RpbWU9MTQ2MDk4ODk4MSZub25jZT0wLjA4OTAyODUzMjQ5MTE4NjI1JmV4cGlyZV90aW1lPTE0NjM1ODA4NjgmY29ubmVjdGlvbl9kYXRhPQ=="
+     key: "45593232",
+         sessionId: "1_MX40NTU5MzIzMn5-MTQ2Mzc0NjkwNTAwMH5zVG1VckNaekVRSnoxQ1BUcVFESUFKWDF-UH4",
+             token: "T1==cGFydG5lcl9pZD00NTU5MzIzMiZzaWc9NDU0NTQwYzBiOGUyNjRlMDQ5ZTZmMDE0OGUzMTBmYjkxZjhhM2U5NDpzZXNzaW9uX2lkPTFfTVg0ME5UVTVNekl6TW41LU1UUTJNemMwTmprd05UQXdNSDV6VkcxVmNrTmFla1ZSU25veFExQlVjVkZFU1VGS1dERi1VSDQmY3JlYXRlX3RpbWU9MTQ2Mzc0NjkzNSZub25jZT0wLjc1MTcyNTg3ODMzMzY3Mjkmcm9sZT1wdWJsaXNoZXImZXhwaXJlX3RpbWU9MTQ2NjMzODkyMw=="
              };
 
              TBAPP.subscribers = [];
